@@ -2,8 +2,7 @@ import { defineConfig } from 'vite';
 import path from 'path';
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/RPG-Home-ForHost/' : '',
-  publicPath: process.env.NODE_ENV === 'production' ? '/RPG-Home-ForHost/' : '',
+  base: './',
   server: {
     headers: {
       "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
