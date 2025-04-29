@@ -6,7 +6,7 @@ import { View } from './scripts/view.js';
 // import { AchivesFactory } from './scripts/achives.factory.js';
 
 // Импорт стилей
-import './style.css' assert { type: 'css' };
+import './style.css';
 
 // Импорт Firebase (если есть файлы в папке firebase/)
 // import initFirebase from './firebase.js';
