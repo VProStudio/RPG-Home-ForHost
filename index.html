@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RPG Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RPG Home Page">
+    <meta name="author" content="Anatoly">
+    <style>
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+        }
+
+        .loader-container.hidden {
+            opacity: 0;
+            pointer-events: none;
+            /* Отключаем взаимодействие */
+        }
+
+        .ring-loader {
+            animation: ring-scale 2s ease-in-out infinite;
+        }
+
+        .ring-progress {
+            animation: ring-dash 3s ease-in-out infinite;
+        }
+
+        @keyframes ring-scale {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes ring-dash {
+            0% {
+                stroke-dashoffset: 360;
+                opacity: 0.7;
+            }
+
+            50% {
+                stroke-dashoffset: 180;
+                opacity: 1;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+                opacity: 0.7;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="loader-container" id="loader">
+        <svg width="80" height="80" viewBox="0 0 80 80" class="ring-loader">
+            <circle class="ring-background" cx="40" cy="40" r="35" fill="none" stroke-width="4"
+                stroke="rgba(52, 160, 168, 0.2)" />
+
+            <circle class="ring-progress" cx="40" cy="40" r="35" fill="none" stroke-width="4" stroke="var(--newTaskBtn)"
+                stroke-linecap="round" stroke-dasharray="30 100">
+                <animateTransform attributeName="transform" type="rotate" from="0 40 40" to="360 40 40" dur="1.5s"
+                    repeatCount="indefinite" />
+            </circle>
+        </svg>
+    </div>
+    <audio src="/public/sounds/266415__endersniper123__awesome-emotional-piano-2.mp3" class="ambient" loop="true"
+        volume="0.01"></audio>
+    <audio src="/public/sounds/688737__mdeliushussain__minecraft-pop.mp3" class="task-toggle-sound" loop="false"
+        volume="0.5"></audio>
+    <div class="display-wrap" data-action="close">
+        <div class="background-block hidden"></div>
+        <header class="header">
+            <!-- <h1 class="app-icon" data-action="close">RPG Home</h1> -->
+            <img src="./public/assets/logo_wide.jpg" alt="RPG Home" class="app-icon" data-action="close">
+            <form class="settings" data-action="settings">
+                <button class="voice button" data-action="voice"></button>
+                <button class="theme button" data-action="theme"></button>
+            </form>
+            <button class="profile-button profile" data-action="modal" data-modal-id="profileNav">
+                <img class="profile-image profile image" alt="Profile" data-action="modal" data-modal-id="profileNav">
+            </button>
+            <div class="menu-container"></div>
+        </header>
+        <content class="content-group">
+            <button class="nav-button task-button text-color" data-action="modal" data-modal-id="tasks">
+                <h2 data-action="modal" data-modal-id="tasks">Задания</h2>
+            </button>
+            <button class="nav-button ladder-button text-color" data-action="modal" data-modal-id="ladder">
+                <h2 data-action="modal" data-modal-id="ladder">Рейтинг</h2>
+            </button>
+        </content>
+        <div class="clouds-background"></div>
+    </div>
+    <!-- <script type="module" src="/DeepVersion/Deep_app.js"></script> -->
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
