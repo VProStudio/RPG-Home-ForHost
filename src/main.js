@@ -6,13 +6,12 @@ import { View } from './scripts/view.js';
 // import { AchivesFactory } from './scripts/achives.factory.js';
 
 // Импорт стилей
-// import './style.css';
-loadCSS('./style.css');
+import './style.css';
 
 // Импорт Firebase (если есть файлы в папке firebase/)
 // import initFirebase from './firebase.js';
 
-import { app, db } from '../firebase/config.js';
+import { app, db } from './firebase/config.js';
 // import { collection, getDocs } from "firebase/firestore"; 
 
 // const querySnapshot = await getDocs(collection(db, "users"));
