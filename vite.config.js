@@ -29,6 +29,7 @@ export default defineConfig({
     preprocessorOptions: {
       css: {
         import: true,
+        modules: false,
       },
     },
   },
