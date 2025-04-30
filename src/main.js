@@ -1,3 +1,4 @@
+console.log(new URL('./firebase/config.js', import.meta.url).href);
 // Импорты из папки scripts/
 import { Controller } from './scripts/controller.js';
 import { Model } from './scripts/model.js';
