@@ -1,4 +1,3 @@
-console.log(new URL('./firebase/config.js', import.meta.url).href);
 // Импорты из папки scripts/
 import { Controller } from './scripts/controller.js';
 import { Model } from './scripts/model.js';
@@ -13,7 +12,7 @@ loadCSS('./style.css');
 // Импорт Firebase (если есть файлы в папке firebase/)
 // import initFirebase from './firebase.js';
 
-import { app, db } from './firebase/config.js';
+import { app, db } from '../firebase/config.js';
 // import { collection, getDocs } from "firebase/firestore"; 
 
 // const querySnapshot = await getDocs(collection(db, "users"));
