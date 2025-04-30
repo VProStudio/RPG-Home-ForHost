@@ -25,11 +25,11 @@ export default defineConfig({
       'firebase/firestore': '/node_modules/firebase/firestore/dist/esm/index.esm.js'
     }
   },
-  // css: {
-  //   preprocessorOptions: {
-  //     css: {
-  //       import: true,
-  //     },
-  //   },
-  // },
+  css: {
+    preprocessorOptions: {
+      css: {
+        import: true,
+      },
+    },
+  },
 });
