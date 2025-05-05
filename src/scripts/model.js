@@ -7,7 +7,7 @@ import {
     sendEmailVerification,
     signInWithEmailAndPassword,
     createUserWithEmailAndPassword,
-} from "./firebase/auth";
+} from "firebase/auth";
 import {
     getFirestore,
     serverTimestamp,
@@ -26,7 +26,7 @@ import {
     query,
     limit,
     doc,
-} from './firebase/firestore';
+} from 'firebase/firestore';
 
 export class Model {
     constructor(view) {
